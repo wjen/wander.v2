@@ -1,0 +1,256 @@
+* {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding: 50px;
+  color: #624e42;
+}
+
+em {
+  font-size: 38px;
+  text-align: center;
+  color: #624e42;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 45px;
+  padding-right: 30px;
+}
+
+a { color: #00B7FF; }
+
+
+/*This is the trip photo icon and title in the trips index*/
+.container-fluid-trips {
+  flex-direction: row;
+  box-decoration-break: clone;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.pics {
+    margin: auto;
+    display:block;
+    width: 250px;
+    height: 250px;
+}
+
+.field {
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.field-btn {
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+.container {
+  align-content: center;
+}
+
+/*This centers the slogan travel capture share*/
+.slogan {
+  padding-left: 50px;
+}
+
+
+#subpic {
+  margin: auto;
+  display: block;
+}
+/*This centers the slogan travel capture share*/
+
+
+/*This is for all the written content*/
+.content {
+    font-size: 20px;
+    color: #624e42;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.contact_list {
+  font-size: 25px;
+  text-align: right;
+  color: #624e42;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.jumbotron{
+  background: url("../images/rome.jpg") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+/*This is for pushing the jumbotron to a larger size*/
+.push-spaces {
+    height: 350px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  padding-left: 80px;
+}
+
+
+#title-words {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+#textarea{
+  font-size: 15pt;
+}
+
+#submit_btn{
+  margin-top: 30px;
+  color: #24afe5;
+  background-color: #624e42;
+  border-radius: 4px;
+}
+
+#bio{
+  width: 3%;
+}
+
+#skip{
+  display: block;
+  position: relative;
+  top: 10px;
+  color: #24afe5;
+  background-color: #624e42;
+  border-radius: 4px;
+}
+
+.input{
+  color: #24afe5;
+}
+
+label{
+  text-decoration: underline;
+}
+
+#about em{
+  color: #624e42;
+  font-family: 'Roboto', sans-serif;
+}
+
+#about p{
+color: #624e42;
+font-family: 'Roboto', sans-serif;
+}
+
+/* NAV BAR CSS */
+
+#wander-logo{
+  width: 10%;
+  position: relative;
+  top: -5px;
+}
+
+.new-trip-adjust {
+  padding-top: 14px;
+}
+/*This is the profile photo in the nav bar*/
+img.mug-shot{
+  border-radius: 30%;
+  padding: 10px;
+  height: 50px;
+}
+
+.navbar-nav>li>.padding-remove {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.footer{
+    border-top: 1px solid gray;
+    clear: both;
+}
+
+/*|||||||||||||||||||||||*/
+
+#contact_list{
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
+  width: 30%;
+}
+
+#contact_list header{
+  position: relative;
+  left: 70%;
+  font-size: 150%;
+}
+
+#contact_list em{
+  text-decoration: underline;
+  color: #624e42;
+  font-family: 'Roboto', sans-serif;
+}
+
+#contact_list ul{
+  list-style: none;
+  position: relative;
+  left: 50%;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.profile-name {
+margin-bottom: 10px;
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  border: 10px solid gray;
+}
+
+.profile-text {
+  border-top: 10px solid lightgray;
+  margin-top: 10px;
+}
+
+#albumlisttitles {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+#album-titles {
+margin: 10px;
+border-bottom: 1px solid gray;
+}
+
+.album-pics {
+  border: 10px solid gray;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+
+}
+
+#albums-picture-list {
+  list-style-type: none;
+}

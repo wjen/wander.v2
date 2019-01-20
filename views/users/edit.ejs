@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ <%- include('../partials/head', {pageType: "bio"}) %>
+</head>
+<body>
+ <%- include('../partials/navbar') %>
+<span id='title-words'><h2> Add Bio </h2><span>
+
+ <% if(user && !user.bio) { %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+      <form method="POST" action="/users?_method=PUT">
+        <textarea class="form-control field" id="textarea" rows=10 name="bio" placeholder="Tell us about yourself" required ></textarea>
+
+        <button class ="form-control btn-success field " type="submit" value="submit" />
+      </form>
+      <a href="/trips/albumSelect"><button class="form-control btn-info field ">Skip</button></a>
+
+    </div>
+  </div>
+ <% } else { %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+
+      <form method="POST" action="/users?_method=PUT">
+        <textarea class="form-control field" id="textarea" rows=10 name="bio" required ><%= user.bio %></textarea>
+
+        <button class ="form-control btn-success" id="title-words" type="submit" value="submit">Submit</button>
+      </form>
+      <a href="/trips/albumSelect"><button class="form-control btn-info" id="title-words">Skip</button></a>
+
+    </div>
+  </div>
+  <% } %>
+
+
+ <%- include('../partials/footer') %>
+ <%- include('../partials/scripts') %>
+
+
+</body>
+</html>

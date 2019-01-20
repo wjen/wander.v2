@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><img id="wander-logo" src="../images/wander_logo2.png"></a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if(user) { %>
+          <% var cls = (page === 'new') ? "active" : ''; %>
+          <li class="<%= cls %> new-trip-adjust"><a class="padding-remove" href="/trips/albumselect">+New Trip</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle padding-remove" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <!-- PROFILE PIC -->
+              <%= user.handle %>
+              <img class="mug-shot" src="<%= user.flickrPhotoUrl %>"/>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/users/edit">Edit Profile</a></li>
+              <li><a href="/trips">My Trips</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/logout">Log out</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a class='delete-button' id="<%= user.handle %>">Delete User</a></li>
+            </ul>
+          </li>
+        <% } else { %>
+          <li><a href="/auth/flickr">Login</a></li>
+        <% } %>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <%- include('../partials/head') %>
+</head>
+<main>
+  <body>
+    <%- include('../partials/navbar') %>
+    <%- include('../partials/header', {subHeading: ''}) %>
+    <div class="jumbotron">
+      <div class="container push-spaces">
+      </div>
+    </div>
+    <!-- This is the text travel capture share -->
+    <div class="slogan">
+      <img src="../images/slogan.png" class="img-responsive" id="subpic" alt="Image">
+    </div>
+
+    <br>
+
+    <div class= content>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+          <!-- This is our map view of the app -->
+          <img src="../images/wander_welcome.png" class="img-responsive" alt="Image">
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            Wander was designed by people who have a love for culture and travel. <br/>
+            It is an app that will allow you to capture your memories and save them
+            to an album. <br/><br/>
+            This album will show your photos, and the route
+            you took by embedding the images into a google map view.<br/><br/>
+            This will allow you to see the route you took and each place you took a photo.<br/><br/>
+            To start, log in with your flicker account and create your first memory.<br/><br/>
+          <br/><br/><br/><br/><br/>
+        </div>
+      </div>
+
+
+     </div>
+      <%- include('../partials/footer') %>
+      <%- include('../partials/scripts') %>
+
+  </body>
+</main>
+</html>

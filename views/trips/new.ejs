@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+ <%- include('../partials/head') %>
+</head>
+<body>
+ <%- include('../partials/navbar') %>
+ <%- include('../partials/header', {subHeading: 'New Trip'}) %>
+ <main>
+<form method="post" action="/trips">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title:</label>
+    <input type="text" name="title" class="form-control" id="exampleInputEmail1" required>
+  </div>
+  <div class="form-group">
+    <label for="descrip">Description:</label>
+    <textarea name="description" class="form-control" rows="5" id="descrip"></textarea>
+  </div>
+
+  <input type="hidden" name="albumId" value="<%= albumId %>">
+  <input type="hidden" name="primaryPhoto" value="<%= primaryPhoto %>">
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+ </main>
+ <%- include('../partials/footer') %>
+ <%- include('../partials/scripts') %>
+</body>
+</html>

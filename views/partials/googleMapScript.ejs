@@ -1,0 +1,39 @@
+
+<script>
+var myCenter;
+
+function initialize(data) {
+  //creates the map with initial properties
+  var mapProp = {
+    center: myCenter,
+    zoom: 15,
+    // create map type
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map =new google.maps.Map(document.getElementById("map"), mapProp);
+
+  var marker = [];
+
+  data.forEach(function(location) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(location.latitude, location.longitude),
+      map: map
+    });
+  });
+  marker.setMap(map);
+};
+
+$(function() {
+  var tripId = $('.grab-loc').attr('title');
+
+  $.get(`/api/locations/${tripId}`)
+    .then(function(data) {
+      myCenter = new google.maps.LatLng(data[0].latitude, data[0].longitude);
+      initialize(data);
+    }, function(err) {
+      console.log(err);
+    });
+});
+
+</script>
+

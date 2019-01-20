@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Roboto:900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ <%- include('../partials/head') %>
+</head>
+<body>
+ <%- include('../partials/navbar', {page: page}) %>
+ <%- include('../partials/header', {subHeading: 'Album Select'}) %>
+ <main>
+<div class="row album-row">
+ <div class="col-md-4">
+  <% if(user) { %>
+    <h1 class="profile-name"> <%= user.name %> </h1>
+    <img class="profile-pic" src="<%= user.flickrPhotoUrl %>"/>
+    <p class="profile-text"> <%= user.bio %> </p>
+  <% } %>
+ </div>
+
+ <div class='col-md-7'>
+  <div id="albumlisttitles">
+    <h2><strong>My Albums</strong></h2>
+  </div>
+  <ul id='albums-picture-list'>
+    <% albums.forEach(function(album) { %>
+      <li class="album-titles"><%= album.title._content %></li><hr>
+      <li><img class="album-pics" src="<%= album.primary_photo_extras.url_s%>">
+          <span class ="select-btn">
+          <a href="/trips/new?album_id=<%= album.id %>&url=<%= album.primary_photo_extras.url_s %>" class= "btn btn-success btn-lg">
+            Select Album
+          </a>
+          </span>
+      </li><br>
+    <% }); %>
+  </ul>
+ </div>
+</div>
+
+
+
+ </main>
+ <%- include('../partials/footer') %>
+ <%- include('../partials/scripts') %>
+</body>
+</html>
