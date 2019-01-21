@@ -1,10 +1,16 @@
 # wander
 
-I feel like we should have something in here, you know like some documentation
+<hr>
+Wander is an app that uses your Flickr photo albums to create trips in which the photos location data is used to plot points on Google Maps so that you can see where all the photos were taken during your trip.  
 
+Wander uses Flickr Oath/Flickr API/Google API to sign in, retrieve photos, and plot points on the map. 
 
-# DEVELOPMENT NOTES
+###Version 2
+<hr>
+Copy of an older version of the group project that is no longer maintained.  This version has goolge maps api key updated. 
 
-### link to go recreate logo from base
-- http://www.designmantic.com/logo-design/create?design=1603
+See the app in action on heroku
+
+[Wander App](https://mysterious-caverns-66478.herokuapp.com/)
+
 
